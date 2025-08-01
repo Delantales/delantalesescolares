@@ -1,0 +1,40 @@
+# Configuración básica para delantalesescolares.com.ar
+
+title: Delantales Escolares
+description: Delantales escolares personalizados de calidad para todas las edades. Compra online con envío rápido.
+baseurl: ""       # Dejar vacío si usás dominio personalizado sin subcarpetas
+url: "https://delantalesescolares.com.ar"
+
+theme: minima    # Tema simple que viene por defecto en GitHub Pages (opcional)
+
+# Configuración SEO básica
+author:
+  name: "Tu Nombre o Empresa"
+  email: "tu-email@ejemplo.com"
+
+# Plugins que podés usar (si querés)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Parámetros para SEO
+seo:
+  twitter:
+    username: "tuTwitter"
+  facebook:
+    publisher: "tuFacebookPageURL"
+
+# Evitar procesamiento de ciertos archivos/carpetas
+exclude:
+  - README.md
+  - node_modules
+  - vendor
+
+# Configuración de navegación (opcional)
+navigation:
+  - title: "Inicio"
+    url: "/"
+  - title: "Productos"
+    url: "/productos/"
+  - title: "Contacto"
+    url: "/contacto/"
