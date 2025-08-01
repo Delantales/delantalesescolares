@@ -8,14 +8,15 @@
   "description": "Delantales escolares personalizados de calidad, compra online con envío rápido.",
   "icons": [
     {
-      "src": "/icono192.png",
+      "src": "/logo-delantales.jpg",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/jpeg"
     },
     {
-      "src": "/icono512.png",
+      "src": "/logo-delantales.jpg",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/jpeg"
     }
   ]
 }
+
