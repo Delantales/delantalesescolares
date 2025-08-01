@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://delantalesescolares.com.ar/sitemap.xml
