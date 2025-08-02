@@ -1,17 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=1024" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Delantales escolares personalizados para nivel inicial, primario y docentes. Diseños únicos con bordado. Envíos por WhatsApp.">
   <title>Delantales Escolares</title>
   <link rel="manifest" href="manifest.json" />
   <style>
-  
+
 .whatsapp-flotante {
   position: fixed;
   right: 20px;
   bottom: 50px;
-  width: 60px;
-  height: 60px;
+  width: 90px;
+  height: 90px;
   background-color: #25d366;
   border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
@@ -20,7 +22,7 @@
   align-items: center;
   cursor: pointer;
   z-index: 9999;
-  animation: titilar 2s infinite;
+  animation: titilar 1s infinite;
   transition: background-color 0.3s ease;
 }
 
@@ -29,8 +31,8 @@
 }
 
 .whatsapp-flotante img {
-  width: 32px;
-  height: 32px;
+  width: 70px;
+  height: 70px;
 }
 
 @keyframes titilar {
@@ -46,19 +48,19 @@
 
     .logo {
       position: absolute;
-      top: 20px;
-      left: 20px;
+      top: 40px;
+      left: 40px;
       width: 170px;
     }
 
     .titulo {
-      font-size: 50px;
+      font-size: 60px;
       font-weight: bold;
       margin-bottom: 10px;
     }
 
     .subtitulo {
-      font-size: 30px;
+      font-size: 40px;
       color: #e91e63;
     }
 
@@ -66,7 +68,7 @@
       background-color: #0060ac;
       color: white;
       text-align: center;
-      font-size: 18px;
+      font-size: 28px;
       padding: 15px 10px;
     }
 
@@ -74,7 +76,7 @@
   position: fixed;
   top: 15px;
   right: 15px;
-  font-size: 22px;
+  font-size: 40px;
   cursor: pointer;
   color: #000;
   z-index: 999;
@@ -88,8 +90,8 @@
       background: red;
       color: white;
       border-radius: 50%;
-      padding: 2px 6px;
-      font-size: 12px;
+      padding: 3px 10px;
+      font-size: 25px;
       vertical-align: top;
     }
 
@@ -204,11 +206,11 @@
     background-color: white;
     color: #005bac;
     border: 2px solid #005bac;
-    padding: 5px 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 20px;
     margin-right: 5px;
     transition: background-color 0.3s;
   }
@@ -486,20 +488,19 @@ main {
 }
 }
 </style>
-
 </head>
 <body>
 
   <!-- ENCABEZADO -->
-<header class="header">
-  <img src="logo-delantales.jpg" alt="Logo Delantales Escolares" class="logo" />
-  <h1 class="titulo">Delantales Escolares</h1>
-  <p class="subtitulo">¡A clases con estilo propio!</p>
-  <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
-</header>
+  <header class="header">
+    <img src="logo-delantales.jpg" alt="Logo Delantales Escolares" class="logo" />
+    <h1 class="titulo">Delantales Escolares</h1>
+    <p class="subtitulo">¡A clases con estilo propio!</p>
+    <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
+  </header>
 
   <!-- FRANJA AZUL -->
-    <div class="franja-azul">
+  <div class="franja-azul">
     <button class="btn-nivel" onclick="location.href='nivel-inicial.html'">NIVEL INICIAL</button>
     <button class="btn-nivel" onclick="location.href='nivel-primario.html'">NIVEL PRIMARIO</button>
     <button class="btn-nivel" onclick="location.href='docentes.html'">DOCENTES</button>
@@ -915,15 +916,12 @@ main {
   <div class="medios-iconos" style="display: flex; gap: 15px; align-items: center;">
     <!-- VISA -->
   <img src="visa.jpg" alt="Visa" style="max-width: 60px; height: auto; display: block;">
-</a>
 
 <!-- MASTERCARD -->
   <img src="mastercard.jpg" alt="Mastercard" style="max-width: 60px; height: auto; display: block;">
-</a>
 
 <!-- MERCADO PAGO -->
   <img src="mercadopago.jpg" alt="Mercado Pago" style="max-width: 90px; height: auto; display: block;">
-</a>
 
   </div>
 
@@ -973,8 +971,6 @@ function simularCalculo() {
 }
 </script>
 
-    </a>
-</div>
 </div>
 
   <!-- Columna derecha -->
@@ -1021,7 +1017,7 @@ function simularCalculo() {
 <!-- Dirección -->
 <div class="contacto" style="color: black; display: flex; align-items: center; margin-bottom: 8px;">
   <img src="direccion.jpg" alt="Ubicación" style="width: 30px; height: 30px; margin-right: 5px; vertical-align: middle; object-fit: contain;">
-  CABA
+  CABA, CP1425
 </div>
 
 <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px; margin-bottom: 8px;">
@@ -1054,14 +1050,13 @@ function simularCalculo() {
   <!-- Defensa del Consumidor -->
   <a href="https://www.argentina.gob.ar/economia/industria-y-comercio/defensadelconsumidor" 
      target="_blank"
-     style="display: flex; align-items: center; color: black; text-decoration: none; font-size: 14px;">
-    <img src="defensadelconsumidor.jpg" alt="web" style="width: 30px; height: 190px; margin-right: 8px; object-fit: contain;">
+     style="display: flex; align-items: center; color: black; text-decoration: none; font-size: 20px;">
+    <img src="defensadelconsumidor.jpg" alt="web" style="width: 40px; height: 210px; margin-right: 8px; object-fit: contain;">
     Defensa del Consumidor
   </a>
   
 </div>
 
-</head>
 <a href="https://wa.me/5491166434129" target="_blank" class="whatsapp-flotante" aria-label="WhatsApp">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
 </a>
@@ -1241,14 +1236,14 @@ if (articulosConBordado.includes(nombre)) {
   width: 100%;
   background-color: #f9f9f9;
   text-align: center;
-  font-size: 14px;
+  font-size: 20px;
   color: #555;
   margin-top: -20px;
   padding: 0px 0;
 ">
   <div id="copyright-footer" style="
     display: inline-block;
-    transform: translateX(-70px); /* 🟢 Ajustalo como quieras */
+    transform: translateX(-150px); /* 🟢 Ajustalo como quieras */
   ">
     Copyright © 2025. Todos los derechos reservados.
   </div>
