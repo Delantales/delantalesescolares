@@ -203,9 +203,8 @@
 }
 
   .imagen-doble img:hover {
-  transform: scale(2);
-  z-index: 10;
-}
+    transform: scale(2.05);
+  }
 
   #modal-bordado {
       text-transform: uppercase;
@@ -376,26 +375,6 @@ main {
   vertical-align: middle;
   margin-right: 8px;
 }
-
-/* Zoom solo en PC */
-@media (min-width: 768px) {
-  .imagen-doble img:hover {
-    transform: scale(2);
-    z-index: 10;
-    position: relative;
-  }
-
-  .imagen-doble {
-    overflow: hidden;
-  }
-}
-
-/* Sin zoom en celulares */
-@media (max-width: 767px) {
-  .imagen-doble img:hover {
-    transform: none;
-  }
-
 .copyright {
   text-align: center;
   font-size: 14px;
@@ -437,8 +416,6 @@ main {
   border-radius: 10px;
 }
 @media only screen and (max-width: 768px) {
-
-}
 
   .product {
     width: 95% !important;
@@ -519,6 +496,16 @@ main {
 }
 }
 
+@media (min-width: 769px) {
+  .imagen-doble > img.lupa {
+    pointer-events: auto;
+  }
+
+  .imagen-doble {
+    pointer-events: none;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -542,8 +529,8 @@ main {
 
   <div class="product">
     <div class="imagen-doble" onclick="mostrarModal('Ponchito Cuadrille Personalizado', 19800, ['ALESSA.jpg', 'COSTADOP.jpg', 'CATALINA.jpg', 'JOAQUINA.jpg', 'PIETRO.jpg', 'LEIA.jpg', 'PEDRO.jpg', 'TOMI.jpg', 'VALENTIN.jpg'], ['Violeta', 'Verde', 'Rosa', 'Naranja', 'Verde', 'Turqueza', 'Amarillo', 'Verde', 'Rojo'])">
-      <img src="PIETRO.jpg" alt="Delantal personalizado modelo PIETRO - Frente">
-      <img src="PIETR2.jpg" alt="Dorso Ponchito">
+      <img src="PIETRO.jpg" class="lupa" onclick="abrirModal(this)">
+      <img src="PIETR2.jpg" class="lupa" onclick="abrirModal(this)">
     </div>
     <h3 style="margin-top: 40px; margin-bottom: 5px;">Ponchito Cuadrille</h3>
     <h3 style="margin-top: 0;">Personalizado</h3>
