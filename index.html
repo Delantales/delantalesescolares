@@ -496,6 +496,44 @@ main {
 }
 }
 
+@keyframes titileo {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+  }
+}
+
+.boton-flotante-logo {
+  position: fixed;
+  right: 15px;
+  top: 100px; /* Ajustá si querés que quede más arriba o más abajo */
+  z-index: 9999;
+  display: block;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #0077cc;
+  padding: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  animation: titileo 1s infinite;
+  transition: transform 0.10s ease;
+}
+
+.boton-flotante-logo:hover {
+  transform: scale(1.1);
+}
+
+.boton-flotante-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
 </style>
 </head>
 <body>
@@ -1300,5 +1338,8 @@ if (articulosConBordado.includes(nombre)) {
   <a href="https://delantalesescolares.com.ar/">Delantales originales para jardín</a>
   <a href="https://delantalesescolares.com.ar/">Delantales infantiles</a>
 </div>
+<a href="comocomprar.html" class="boton-flotante-logo" title="Ver más información">
+  <img src="comocomprar.jpg" alt="Botón de Información" />
+</a>
 
 </body>
