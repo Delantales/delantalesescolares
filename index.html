@@ -510,17 +510,19 @@ main {
 .boton-flotante-logo {
   position: fixed;
   right: 15px;
-  top: 100px; /* Ajustá si querés que quede más arriba o más abajo */
+  top: 100px;
   z-index: 9999;
   display: block;
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  background-color: #0077cc;
-  padding: 5px;
+  background-color: pink;      /* o transparente */
+  border: 4px solid #0077cc;   /* borde azul */
+  padding: 0;                  /* sin padding para que no corte */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   animation: titileo 1s infinite;
   transition: transform 0.10s ease;
+  overflow: visible;           /* para evitar recortes */
 }
 
 .boton-flotante-logo:hover {
@@ -530,8 +532,8 @@ main {
 .boton-flotante-logo img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  border-radius: 50%;
+  object-fit: cover;  /* La imagen cubre todo el círculo */
+  border-radius: 50%; /* Para que sea circular */
 }
 
 </style>
