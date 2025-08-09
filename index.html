@@ -924,11 +924,49 @@ main {
       let textoBordado = item.bordado ? `, Bordado: ${item.bordado}` : '';
       return `• ${item.nombre} - Color: ${item.color}, Talle: ${item.talle}, Cantidad: ${item.cantidad}${textoBordado} - $${item.totalItem}`;
     }).join("\n");
-    const mensaje = `Hola, quiero comprar:\n${resumen}\nTotal: $${total}`;
+    const mensaje = `Buen día, solicito la compra de:\n${resumen}\nTotal: $${total}`;
     const telefono = "5491166434129";
     const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, "_blank");
+    // Abrir WhatsApp en una pestaña nueva
+  window.open(url, "_blank");
+
+  // --- LIMPIAR CARRITO EN MEMORIA ---
+  cart = [];
+  total = 0;
+
+  // Si guardás el carrito en localStorage bajo alguna clave, removela (intento seguro)
+  try { localStorage.removeItem('cart'); } catch (e) {}
+
+  // --- ACTUALIZAR INTERFAZ ---
+  try {
+    if (typeof updateCart === 'function') {
+      updateCart();
+    } else {
+      const lista = document.getElementById('cart-items');
+      if (lista) lista.innerHTML = '';
+      const totalSpan = document.getElementById('cart-total');
+      if (totalSpan) totalSpan.textContent = '0';
+      const count = document.getElementById('cart-count');
+      if (count) count.textContent = '0';
+      const cartBox = document.getElementById('cart');
+      if (cartBox) cartBox.style.display = 'none';
+    }
+  } catch(e) {
+    console.error('Error actualizando UI después de vaciar carrito', e);
   }
+
+  // Mostrar un aviso temporal en la página para que el usuario sepa que el carrito quedó vacío
+  try {
+    const aviso = document.createElement('div');
+    aviso.textContent = 'Compra finalizada. Gracias — Se abrió WhatsApp.';
+    aviso.style.cssText = 'position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#0060ac; color:white; padding:10px 18px; border-radius:6px; z-index:100000; font-weight:bold; box-shadow:0 4px 12px rgba(0,0,0,0.2);';
+    document.body.appendChild(aviso);
+    setTimeout(()=> { aviso.remove(); }, 4000);
+  } catch(e) {}
+
+  // Opcional: recargar si querés (descomentar)
+  // setTimeout(() => location.reload(), 1000);
+}
 
   function abrirGaleria(lista) {
     imagenesGaleria = lista;
@@ -1333,15 +1371,36 @@ if (articulosConBordado.includes(nombre)) {
     cart.scrollIntoView({ behavior: 'smooth' });
   });
 </script>
-<div class="seo-links" style="display:none;">
-  <a href="https://delantalesescolares.com.ar/">Delantales escolares personalizados</a>
-  <a href="https://delantalesescolares.com.ar/">Delantales con nombre bordado</a>
-  <a href="https://delantalesescolares.com.ar/">Delantales para maestras de nivel inicial</a>
-  <a href="https://delantalesescolares.com.ar/">Delantales originales para jardín</a>
-  <a href="https://delantalesescolares.com.ar/">Delantales infantiles</a>
-</div>
+
 <a href="comocomprar.html" class="boton-flotante-logo" title="Ver más información">
   <img src="comocomprar.jpg" alt="Botón de Información" />
 </a>
+
+<!-- Enlaces internos para SEO ocultos -->
+<div class="enlaces-importantes" style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">
+  <a href="/poncho-para-maestra.html">Poncho para maestra de nivel inicial</a> |
+  <a href="/poncho-para-docentes-y-auxiliares.html">Poncho para docentes y auxiliares</a> |
+  <a href="/ponchitos-escolares-personalizados.html">Ponchitos escolares personalizados para niños y niñas</a> |
+  <a href="/ponchitos-escolares-mayor-menor.html">Ponchitos escolares por mayor y menor</a> |
+  <a href="/ponchitos-escolares-disenos-exclusivos.html">Ponchitos escolares con diseños exclusivos</a> |
+  <a href="/ponchitos-con-nombre-bordado.html">Ponchitos con nombre bordado para jardín</a> |
+  <a href="/pintorcitos-personalizados.html">Pintorcitos personalizados</a> |
+  <a href="/pintorcitos-nivel-inicial.html">Pintorcitos para nivel inicial</a> |
+  <a href="/pintorcitos-jardin-infantes.html">Pintorcitos para jardín de infantes</a> |
+  <a href="/pintorcitos-con-nombre.html">Pintorcitos con nombre</a> |
+  <a href="/delantales-para-maestras-de-nivel-inicial.html">Delantales para maestras de nivel inicial</a> |
+  <a href="/delantales-para-jardin.html">Delantales para jardín</a> |
+  <a href="/delantales-infantiles-originales.html">Delantales infantiles originales</a> |
+  <a href="/delantales-escolares-personalizados.html">Delantales escolares personalizados</a> |
+  <a href="/delantales-con-nombre-bordado.html">Delantales con nombre bordado</a> |
+  <a href="/guardapolvos-escolares-personalizados-con-nombre-bordado.html">Guardapolvos Escolares Personalizados con Nombre Bordado</a> |
+  <a href="/guardapolvos-escolares-para-nivel-inicial-y-primario.html">Guardapolvos Escolares para Nivel Inicial y Primario</a> |
+  <a href="/guardapolvos-escolares-para-maestras-y-docentes.html">Guardapolvos Escolares para Maestras y Docentes</a> |
+  <a href="/guardapolvos-infantiles-originales-para-jardin-de-infantes.html">Guardapolvos Infantiles Originales para Jardín de Infantes</a> |
+  <a href="/guardapolvos-escolares-para-nenas-y-nenes.html">Guardapolvos Escolares para Nenas y Nenes</a> |
+  <a href="/guardapolvos-escolares-para-jardin-maternal.html">Guardapolvos Escolares para Jardín Maternal</a> |
+  <a href="/guardapolvos-escolares-clasicos-blancos.html">Guardapolvos Escolares Clásicos Blancos</a> |
+  <a href="/guardapolvos-escolares.html">Guardapolvos Escolares</a>
+</div>
 
 </body>
